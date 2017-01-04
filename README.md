@@ -1,2 +1,1 @@
-# lobster-pictures-style-guide
-Lobster Pictures Online Guidelines
+# Lobster Pictures Online Guidelines
