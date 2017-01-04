@@ -2,11 +2,9 @@
 
 @TODO
 
-- Needs webfont reference
+
 
 */
-
-
 
 
 /* Stylesheet only */
@@ -85,6 +83,12 @@ dl.color-e7f0f0 dt.circle{
 /* Lobster Pictures Styles */
 body {
   background-color: #e7f0f0;
+}
+
+@font-face {
+  font-family: 'AvenirLT-Medium';
+  src: url("2B0794_0_0.eot");
+  src: url("2B0794_0_0.eot?#iefix") format("embedded-opentype"), url("2B0794_0_0.woff") format("woff"), url("2B0794_0_0.ttf") format("truetype");
 }
 
 h1 {
