@@ -1,11 +1,19 @@
+/*
+
+@TODO
+
+- Needs webfont reference
+
+*/
+
+
+
+
 /* Stylesheet only */
-dl {
-  font-family: "AvenirLT-Medium", Helvetica, Arial, sans-serif;
-}
 
 h1.stylesheet, h2.stylesheet, h3.stylesheet {
   /* Resets */
-  text-transform: none !important;
+  text-transform: uppercase !important;
   font-weight: 500 !important;
   line-height: 1.1 !important;
   color: #4a4a4a !important;
@@ -13,6 +21,29 @@ h1.stylesheet, h2.stylesheet, h3.stylesheet {
   text-align: left !important;
 
   margin: 60px 0 30px 0 !important;
+
+  width: 100%;
+}
+
+.subsection, .subsection h2 {
+  width: 100%;
+}
+
+.subsection dl {
+  font-family: "AvenirLT-Medium", Helvetica, Arial, sans-serif;
+}
+
+.subsection dl, .subsection dt, .subsection dd {
+  padding: 0;
+  margin: 0;
+}
+
+.subsection, .subsection dl {
+  display: inline-block;
+}
+
+.subsection dl {
+  margin-right: 25px;
 }
 
 dt.circle {
@@ -20,6 +51,7 @@ dt.circle {
 	border-radius: 50%;
 	width: 70px;
 	height: 70px;
+  margin-bottom: 10px;
 	/* width and height can be anything, as long as they're equal */
 }
 
@@ -43,6 +75,7 @@ dl.color-7b7b7b dt.circle{
 }
 dl.color-e7f0f0 dt.circle{
   background-color: #e7f0f0;
+  border: 1px solid #4a4a4a;
 }
 
 /* Stylesheet only ends*/
@@ -69,6 +102,13 @@ h1 {
   /*H1's dynamically resize acording to device and size of title (e.g. two lines)*/
 }
 
+.masthead-title-wrap {
+  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAYAAACNbyblAAAAEUlEQVQImWNgYGAoxYKpLggARz4LbkRL2CMAAAAASUVORK5CYII=) repeat;
+  display: block;
+  overflow: hidden;
+  width: 100%;
+}
+
 h2 {
   font-family: "AvenirLT-Medium", Helvetica, Arial, sans-serif;
   font-size:28px;
@@ -76,8 +116,19 @@ h2 {
   text-transform: uppercase;
   font-weight: 400;
   line-height: 1;
-  color: #ffffff;
-  background-color: #d63d35;
+  color: #4a4a4a;
+
+  display: inline-table; /* For border-bottom - temp? */
+}
+
+h2.body-pull-block:after {
+  /* Better than border-bottom alone, as it matches length of title*/
+  content: "";
+  border-bottom: 2px solid #d63d35;
+  display: table-caption;
+  caption-side: bottom;
+  position: relative;
+  margin-top:-0.15em;
 }
 
 h3 {
@@ -85,7 +136,7 @@ h3 {
   font-size:27px;
   letter-spacing: 2px;
   text-transform: inherit;
-  font-weight: 500;
+  font-weight: 200;
   line-height: 1.1;
   color: #d63d35;
 }
@@ -95,7 +146,7 @@ h4 {
   font-size:22px;
   letter-spacing: inherit;
   text-transform: inherit;
-  font-weight: 500;
+  font-weight: 200;
   line-height: 1.1;
   color: #4a4a4a;;
   background-color: #inherit;
@@ -113,7 +164,7 @@ p {
 }
 
 
-h1.body-pull-block:before, h2.body-pull-block:before {
+h1.body-pull-block:before {
   content: " ";
   border-left:3px solid #fff;
   border-top:3px solid #fff;
@@ -126,7 +177,7 @@ h1.body-pull-block:before, h2.body-pull-block:before {
 }
 
 
-h1.body-pull-block:after, h2.body-pull-block:after{
+h1.body-pull-block:after {
   content: " ";
   border-right:3px solid #fff;
   border-top:3px solid #fff;
@@ -136,14 +187,6 @@ h1.body-pull-block:after, h2.body-pull-block:after{
   bottom:-10px;
   margin: 0 0 0 50px;
   position: relative;
-}
-
-h2.body-pull-block {
-  margin-top: 22px;
-  margin-bottom: 26px;
-  padding: 30px 30px 22px 30px;
-  width: 100%;
-  text-align: center;
 }
 
 /* Lobster Pictures Styles - ends */
